@@ -16,7 +16,7 @@ namespace PilotableStranger
 
         private void Start()
         {
-            ModHelper.Console.WriteLine($"Pilotable Stranger Mod Loaded");
+            ModHelper.Console.WriteLine($"No Dam Break Mod Loaded!");
 
             ModHelper.HarmonyHelper.AddPrefix<RingWorldController>("BreakDam", typeof(PilotableStranger), nameof(PilotableStranger.NoDamBreak));
             ModHelper.HarmonyHelper.AddPrefix<RingWorldController>("DamageDam", typeof(PilotableStranger), nameof(PilotableStranger.NoDamDamage));
