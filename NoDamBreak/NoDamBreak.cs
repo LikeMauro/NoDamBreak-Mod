@@ -3,9 +3,9 @@ using OWML.ModHelper;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-namespace PilotableStranger
+namespace NoDamBreakMod
 {
-    public class PilotableStranger : ModBehaviour
+    public class NoDamBreakMod : ModBehaviour
     {
         private void Awake()
         {
@@ -18,8 +18,8 @@ namespace PilotableStranger
         {
             ModHelper.Console.WriteLine($"No Dam Break Mod Loaded!");
 
-            ModHelper.HarmonyHelper.AddPrefix<RingWorldController>("BreakDam", typeof(PilotableStranger), nameof(PilotableStranger.NoDamBreak));
-            ModHelper.HarmonyHelper.AddPrefix<RingWorldController>("DamageDam", typeof(PilotableStranger), nameof(PilotableStranger.NoDamDamage));
+            ModHelper.HarmonyHelper.AddPrefix<RingWorldController>("BreakDam", typeof(NoDamBreakMod), nameof(NoDamBreakMod.NoDamBreak));
+            ModHelper.HarmonyHelper.AddPrefix<RingWorldController>("DamageDam", typeof(NoDamBreakMod), nameof(NoDamBreakMod.NoDamDamage));
 
         }
 
